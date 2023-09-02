@@ -1,24 +1,17 @@
-let usuarioTxt = document.getElementById("usuario");
+let montoTXT = document.getElementById("monto");
+let gastoTXT = document.getElementById("gasto");
 
-let p = document.getElementById("mensaje"); //parrafo
 
-let passwordTtx = document.getElementById("password");
 
-function login(){
-    //Login aqui
-    p.innerHTML = "Login Correcto, " + usuarioTxt.value; //cambia el texto en el parrafo
+let gastosArreglo = []; //Arreglo vacio
 
-    limpiar();
-}
+function agregarAarreglo(){
+    let nuevogasto = gastoTXT.value + ": $" + montoTXT.value;
 
-function registro(){
-    //Registro aqui
-    p.innerHTML = "Registro con éxito, " + usuarioTxt.value; //cambia el texto en el parrafo
+   
+    gastosArreglo.push(nuevogasto);
 
-    limpiar();
-}
 
-function limpiar(){
-    usuarioTxt.value = "";
-    passwordTtx.value = "";
+  
+    console.log(gastosArreglo);
 }
