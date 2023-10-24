@@ -7,15 +7,18 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { ListaAlumnosComponent } from '../lista-alumnos/lista-alumnos.component';
 import { ProductosComponent } from '../productos/productos.component';
+import {HttpClientModule} from '@angular/common/http';
 
+import { ProductoDetalleComponent } from '../producto-detalle/producto-detalle.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [HomePage, ListaAlumnosComponent,ProductosComponent]
+  declarations: [HomePage, ListaAlumnosComponent, ProductosComponent, ProductoDetalleComponent]
 })
 export class HomePageModule {}
