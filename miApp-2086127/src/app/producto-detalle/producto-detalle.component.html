@@ -1,12 +1,40 @@
-<ion-content>
-  <ion-card>
-      <ion-card-title>{{producto.title}}</ion-card-title>
-      <ion-card-content>
-        <p>{{producto.price}}</p>
-        <p>{{producto.category}}</p>
-        <img width="250px" height="150px" src="{{producto.image}}" alt="">
+
+
+<ion-card>
+  <ion-card-title>{{producto.title}}</ion-card-title>
+  <ion-card-subtitle>{{producto.category}}</ion-card-subtitle>
+  <ion-card-content>
+    <img src="{{producto.image}}" alt="" width="200px">
+    
+    <p class="descripcion">{{producto.description}}</p>
+    <p>Price: $<strong>{{producto.price}}</strong></p>
+
+      <p *ngIf="producto.rating.rate > 4" >
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </p>
+      <p *ngIf="producto.rating.rate > 3 && producto.rating.rate < 4" >
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
         
-        <p>{{producto.description}}</p>
-      </ion-card-content>
-  </ion-card>
-</ion-content>
+      </p>
+      <p *ngIf="producto.rating.rate > 2 && producto.rating.rate < 3" >
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+ 
+      </p><p *ngIf="producto.rating.rate > 1 && producto.rating.rate < 2" >
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+
+      </p><p *ngIf="producto.rating.rate > 0 && producto.rating.rate < 1" >
+        <ion-icon name="star"></ion-icon>
+
+      </p>
+  </ion-card-content>
+</ion-card>
