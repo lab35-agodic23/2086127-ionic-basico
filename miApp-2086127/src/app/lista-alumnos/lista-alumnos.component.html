@@ -1,8 +1,11 @@
 <ion-content>
-  <form #templateForm="ngForm" (ngSubmit)="agregarAlumno()" [ngClass]="{'ng-invalid': templateForm.invalid, 'ng-valid': templateForm.valid, 'ng-dirty': templateForm.dirty, 'ng-touched': templateForm.touched}">
-    <ion-input [(ngModel)]="nuevoAlumno.nombre" name="nombre" required></ion-input>
-    <ion-input [(ngModel)]="nuevoAlumno.presente" name="presente"></ion-input>
-    <button type="submit">Agregar</button>
+  <form #templateForm="ngForm" (ngSubmit)="agregarAlumno()">
+    <ion-label>Nombre alumno: </ion-label>
+    <ion-input required [(ngModel)]="nuevoAlumno.nombre" placeholder = "Ejemplo: Eduardo" name="nombre"></ion-input>
+    <ion-checkbox [(ngModel)]="nuevoAlumno.presente" name="presente"></ion-checkbox> Presente
+    <div>
+      <button type="submit" style="font-size: 20px; padding: 10px 20px ;">Agregar</button>
+    </div>           
   </form>
 
   <ion-list *ngFor="let alumno of alumnos">
@@ -12,7 +15,7 @@
       </ion-item-options>
 
       <ion-item>
-        <ion-label>{{alumno}}</ion-label>
+        <ion-label>{{alumno.nombre}}</ion-label>
       </ion-item>
 
       <ion-item-options side="end">
@@ -22,3 +25,4 @@
     </ion-item-sliding>
   </ion-list>
 </ion-content>
+

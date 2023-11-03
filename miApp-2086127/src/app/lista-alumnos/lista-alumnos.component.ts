@@ -6,7 +6,7 @@ import { Alumno } from './alumno.model';
   templateUrl: './lista-alumnos.component.html',
   styleUrls: ['./lista-alumnos.component.scss']
 })
-export class ListaAlumnosComponent  {
+export class ListaAlumnosComponent  { 
   nuevoAlumno: Alumno;
   alumnos: Alumno[] = [];
 
