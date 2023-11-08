@@ -10,6 +10,9 @@ import { ProductosComponent } from '../productos/productos.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import { ProductoDetalleComponent } from '../producto-detalle/producto-detalle.component';
+import { CamaraComponent } from '../camera/camera.component';
+
+
 
 @NgModule({
   imports: [
@@ -19,6 +22,6 @@ import { ProductoDetalleComponent } from '../producto-detalle/producto-detalle.c
     HomePageRoutingModule,
     HttpClientModule
   ],
-  declarations: [HomePage, ListaAlumnosComponent, ProductosComponent, ProductoDetalleComponent]
+  declarations: [HomePage, ListaAlumnosComponent, ProductosComponent, ProductoDetalleComponent, CamaraComponent]
 })
 export class HomePageModule {}
