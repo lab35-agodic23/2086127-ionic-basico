@@ -4,6 +4,15 @@
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let foto of fotos; let i = index">
+        <img [src]="foto.webViewPath" alt="Imagen {{i + 1}}">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
 
 
