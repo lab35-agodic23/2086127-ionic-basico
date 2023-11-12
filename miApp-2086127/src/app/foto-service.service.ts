@@ -3,6 +3,7 @@ import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Preferences } from '@capacitor/preferences';
 import { Foto } from './camera/foto.model';
+import { Platform } from '@ionic/angular';
 
 
 
@@ -12,8 +13,11 @@ import { Foto } from './camera/foto.model';
 export class FotoServiceService {
 
   public fotos: Foto[] = [];
+  private plataforma: Platform;
 
-  constructor() { }
+  constructor(plataforma : Platform) { 
+    this.plataforma = plataforma;
+  }
 
   public async addNewToGallery() {
     try {
